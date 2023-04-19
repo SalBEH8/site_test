@@ -160,6 +160,13 @@ main section.video-section {
     justify-content: center;
 }
 
+.video-section video {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    border: none;
+}
+
 .form-row {
     display: flex;
     flex-direction: column;
