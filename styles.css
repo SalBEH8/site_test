@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #000;
-    color: #fff;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 header {
@@ -15,11 +15,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #900c3f;
+    background-color: #1a1a1a;
 }
 
 header h1 {
     font-size: 1.5rem;
+    color: #fff;
 }
 
 nav ul {
@@ -33,7 +34,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #c5b358;
+    color: #0071bc;
 }
 
 nav a:hover {
@@ -47,7 +48,7 @@ main {
 h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #c5b358; 
+    color: #b22234; 
 }
 
 p {
@@ -56,20 +57,19 @@ p {
 }
 
 footer {
-    background-color: #900c3f;
+    background-color: #1a1a1a;
     padding: 1rem;
     text-align: center;
     margin-top: 2rem;
 }
 
 footer a {
-    color: #c5b358; 
+    color: #0071bc; 
 }
 
 footer a:hover {
     text-decoration: underline;
 }
-
 
 @media (max-width: 1024px) {
     h2 {
