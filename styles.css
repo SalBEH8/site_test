@@ -109,3 +109,82 @@ footer a:hover {
         font-size: 0.875rem;
     }
 }
+
+/* page articles */
+.article-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1%;
+    margin-bottom: 2rem;
+}
+
+article {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+article h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    text-decoration: none;
+    color: #0071bc;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/*pour la page index.html */
+main section {
+    margin-bottom: 1%;
+}
+
+main section:last-child {
+    margin-bottom: 0;
+}
+
+main article:not(:last-child) {
+    margin-bottom: 1%;
+}
+
+main section.video-section {
+    display: flex;
+    justify-content: center;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+button[type="submit"] {
+    background-color: #0071bc;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #005999;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

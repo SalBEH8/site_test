@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutomaTest - Contact</title>
-    <link rel="stylesheet" href="styles.css"></head>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -23,34 +23,40 @@
         <section>
             <h1>Me contacter</h1>
             <form>
-                <label for="prenom">Prénom :</label>
-                <input type="text" id="prenom" name="prenom" required>
-                <br>
+                <div class="form-row">
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
 
-                <label for="nom">Nom de famille :</label>
-                <input type="text" id="nom" name="nom" required>
-                <br>
+                <div class="form-row">
+                    <label for="nom">Nom de famille :</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
 
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
-                <br>
+                <div class="form-row">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-                <label for="dateNaissance">Date de naissance :</label>
-                <input type="date" id="dateNaissance" name="dateNaissance" required>
-                <br><br>
+                <div class="form-row">
+                    <label for="dateNaissance">Date de naissance :</label>
+                    <input type="date" id="dateNaissance" name="dateNaissance" required>
+                </div>
 
-                <label for="raison">Raison du message :</label>
-                <select id="raison" name="raison" required>
-                    <option value="">Sélectionnez une raison</option>
-                    <option value="info_prestations">Information sur mes prestations</option>
-                    <option value="probleme_site">Problème avec mon site internet</option>
-                    <option value="autre">Autre</option>
-                </select>
-                <br><br>
+                <div class="form-row">
+                    <label for="raison">Raison du message :</label>
+                    <select id="raison" name="raison" required>
+                        <option value="">Sélectionnez une raison</option>
+                        <option value="info_prestations">Information sur mes prestations</option>
+                        <option value="probleme_site">Problème avec mon site internet</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
 
-                <label for="message">Ecrivez votre message :</label>
-                <textarea id="message" name="message" rows="5" cols="33" maxlength="500" wrap>Tapez votre message ici...</textarea>
-                <br>
+                <div class="form-row">
+                    <label for="message">Ecrivez votre message :</label>
+                    <textarea id="message" name="message" rows="5" cols="33" maxlength="500" wrap>Tapez votre message ici...</textarea>
+                </div>
 
                 <button type="submit">Envoyer</button>
             </form>
@@ -61,7 +67,7 @@
         <label>S'inscrire à la newsletter <input type="checkbox" value="newsletter"></label>
     </section>
     <footer>
-        <span>@ Copyright 2023</span>
+        <p>&copy; 2023 AutomaTest.</p>
     </footer>
 </body>
 </html>
