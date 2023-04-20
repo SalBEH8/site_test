@@ -16,7 +16,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #4B0082;
+    background-color: grey;
 }
 
 header h1 {
@@ -35,7 +35,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #00FFFF;
+    color: #fff;
 }
 
 nav a:hover {
@@ -58,14 +58,14 @@ p {
 }
 
 footer {
-    background-color: #4B0082;
+    background-color: grey;
     padding: 1rem;
     text-align: center;
     margin-top: 2rem;
 }
 
 footer a {
-    color: #00FFFF;
+    color: white;
 }
 
 footer a:hover {
@@ -162,7 +162,7 @@ article p {
 
 .read-more {
     text-decoration: none;
-    color: #00FFFF;
+    color: #fff;
     font-weight: 600;
     margin-top: auto;
 }
@@ -282,7 +282,7 @@ main section:not(:last-child) {
 
 /* page contact */
 button[type="submit"] {
-    background-color: #00FFFF;
+    background-color: #B22222;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
