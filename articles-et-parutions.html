@@ -24,6 +24,10 @@
         <h2>Articles et parutions</h2>
         <div id="articles"></div>
 
+        <div class="batman-container">
+            <img src="batman.svg" alt="Batman" class="batman">
+          </div>
+
         <section>
             <h2>Ajouter un article</h2>
             <form id="add-article-form">
@@ -86,7 +90,7 @@
                             // Refresh page
                             window.location.reload();
                         } else {
-                            alert('Erreur lors de l\'ajout de l\'article');
+                            alert('Erreur lors de lajout de larticle');
                         }
                     })
                     .catch((error) => {
