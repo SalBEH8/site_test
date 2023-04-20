@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #f5f5f5;
+    background-image: linear-gradient(85deg, #f5f5f5, rgba(245,245,245,0.85));
     color: #333;
 }
 
@@ -16,7 +16,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #1a1a1a;
+    background-color: #4B0082;
 }
 
 header h1 {
@@ -35,7 +35,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #0071bc;
+    color: #00FFFF;
 }
 
 nav a:hover {
@@ -49,7 +49,7 @@ main {
 h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #b22234;
+    color: #B22222;
 }
 
 p {
@@ -58,18 +58,23 @@ p {
 }
 
 footer {
-    background-color: #1a1a1a;
+    background-color: #4B0082;
     padding: 1rem;
     text-align: center;
     margin-top: 2rem;
 }
 
 footer a {
-    color: #0071bc;
+    color: #00FFFF;
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+header, main, footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 @media (max-width: 1024px) {
@@ -86,6 +91,7 @@ footer a:hover {
     h2 {
         font-size: 1.5rem;
     }
+
 
     nav ul {
         flex-direction: column;
@@ -115,15 +121,14 @@ footer a:hover {
 .article-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 1rem;
+    grid-gap: 2rem;
     margin-bottom: 2rem;
 }
 
 article {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     color: #333;
     display: flex;
     flex-direction: column;
@@ -131,22 +136,33 @@ article {
 }
 
 article h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
     font-weight: 700;
+    color: #222;
 }
 
 article p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     line-height: 1.8;
-    color: #444;
+    color: #333;
+}
+
+#articles h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+#articles p {
+    margin-bottom: 1.5rem;
 }
 
 .read-more {
     text-decoration: none;
-    color: #0071bc;
+    color: #00FFFF;
     font-weight: 600;
     margin-top: auto;
 }
@@ -155,7 +171,7 @@ article p {
     text-decoration: underline;
 }
 
-/*pour la page index.html */
+/*Page index.html */
 main section {
     margin-bottom: 1%;
 }
@@ -178,86 +194,111 @@ main section.video-section {
     max-width: 560px;
     height: auto;
     border: none;
-    }
-    
-    .form-row {
+}
+
+.form-row {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
-    }
-    
-    label {
+}
+
+label {
     margin-bottom: 0.5rem;
-    }
-    
-    /* Ajouter un article */
-    #add-article-form {
+}
+
+main section:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+/* Ajouter un article */
+#add-article-form {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    }
-    
-    #add-article-form input[type="text"],
-    #add-article-form textarea {
+}
+
+#add-article-form input[type="text"],
+#add-article-form textarea {
     width: 100%;
     min-height: 100px;
+    margin-bottom: 1rem;
+}
+
+.batman-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.batman {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fadeInOut 10s linear forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#add-article-form textarea {
+    min-height: 200px;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .batman-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 999;
-        pointer-events: none;
-    }
-    
-    .batman {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; 
-        animation: fadeInOut 10s linear forwards;
-    }
-    
-    @keyframes fadeInOut {
-        0% {
-            opacity: 0;
-        }
-        50% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
-    }
-    
-    
+    #add-article-form input[type="text"],
     #add-article-form textarea {
-    min-height: 200px;
+        width: 100%;
+        min-height: 100px;
     }
-    
-    /* page contact */
-    button[type="submit"] {
-    background-color: #0071bc;
+
+    .video-section video {
+        width: 100%;
+        max-width: 560px;
+        height: auto;
+        border: none;
+    }
+}
+
+/* page contact */
+button[type="submit"] {
+    background-color: #00FFFF;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
-    }
-    
-    button[type="submit"]:hover {
-    background-color: #005999;
-    }
-    
-    @media (max-width: 768px) {
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0071bc;
+}
+
+@media (max-width: 768px) {
     .form-row {
-    flex-direction: column;
-    align-items: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
     }
-    }
+}
